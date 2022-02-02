@@ -32,3 +32,11 @@ npm install
 npm install @supabase/supabase-js
 npm run dev
 ```
+
+
+Tools Required:
+- Python
+- Pandas
+- dateutil
+- npm
+- Supabase
