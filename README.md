@@ -16,10 +16,19 @@ First, the data is entered into Supabase as one event from March 14th to March 2
 
 ![alt text](https://github.com/IIVIIIII/TCB_Streamlining/blob/main/resources/images/data_entry.jpg?raw=true)
 
-When the website prompts Supabase to perform the query as defined in the SQL function below, it returns all data for events within the dates entered as arguments.
+When the website prompts Supabase to perform the query as defined in the SQL function below, it returns all data for events within the range of dates entered as arguments.
 
 ![alt text](https://github.com/IIVIIIII/TCB_Streamlining/blob/main/resources/images/query.jpg?raw=true)
 
 The website's internal JavaScript logic then generates the dates for all relevant instances of the event according to its extracted recurrence pattern and stores them in an array matched to the key of  “dates_.” This logic without context of its website can be viewed in the “events.js” file. The result for “Echoes on Pico” would appear as follows:
 
 ![alt text](https://github.com/IIVIIIII/TCB_Streamlining/blob/main/resources/images/console_log.jpg?raw=true)
+
+To see proof of the logic's functionality, enter the lines below into your terminal and then go to http://localhost:3000 in your browser.
+```
+git clone <this-repo>
+cd tcb_events
+npm install
+npm install @supabase/supabase-js
+npm run dev
+```
