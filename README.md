@@ -4,7 +4,7 @@ This repository represents a summary of my contributions to The Comedy Bureau’
 
 My task was to create a data model that could manage recurring events, successfully query the created database from the website, and generate all individual instances of each queried parent event in accordance with their designated recurrence pattern.
 
-The final database is stored with Supabase and involves two separate tables: one called “events” that holds all data for parent events along with their recurrence pattern, and another called “exceptions,” which holds exceptions to the recurrence pattern of events linked to by the “parent_event_id” as a foreign key. The model can be visualized as such:
+The final database is stored with Supabase and involves two separate tables: one called “events” that holds all data for parent events along with their recurrence pattern, and another called “exceptions,” which holds exceptions to the recurrence pattern of events linked to by the “parent_event_id” as a foreign key. The schema for the model is avaliable in the "schema.sql" file and can be visualized as such:
 
 ![alt text](https://github.com/IIVIIIII/TCB_Streamlining/blob/main/resources/images/data_model.jpg?raw=true)
 
@@ -16,7 +16,7 @@ First, the data is entered into Supabase as one event from March 14th to March 2
 
 ![alt text](https://github.com/IIVIIIII/TCB_Streamlining/blob/main/resources/images/data_entry.jpg?raw=true)
 
-When the website prompts Supabase to perform the query as defined in the SQL function below, it returns all data for events within the range of dates entered as arguments.
+When the website prompts Supabase to perform the query as defined in the SQL function below (also visibile in the "query_function.sql" file), it returns all data for events within the range of dates entered as arguments.
 
 ![alt text](https://github.com/IIVIIIII/TCB_Streamlining/blob/main/resources/images/query.jpg?raw=true)
 
@@ -32,8 +32,6 @@ npm install
 npm install @supabase/supabase-js
 npm run dev
 ```
-
-
 
 
 Tools Required:
